@@ -1,49 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Services</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-              <a class="nav-link" href="#">Services</a>
-              <a class="nav-link" href="#">About-us</a>
-              <!-- <a class="nav-link disabled" aria-disabled="true">Disabled</a> -->
-            </div>
-          </div>
+ 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#">Services</a>
+          <a class="nav-link" href="#">About-us</a>
+          <!-- <a class="nav-link disabled" aria-disabled="true">Disabled</a> -->
         </div>
-    </nav>
-    <div class="container text-center rounded shadow py-2 mt-2" style="max-width: 90%;">
-        <div class="row align-items-center">
-          <div class="col text-center">
-            <h2 class="fw-semibold">Experience the magic of Travel</h2>
-            <p class="lead  text-wrap " style="width: 20rem;">
-                Plan your dream vacation with us!
-                Explore destinations , book flights and hotels,
-                 and discover exciting activities.
-                Get personalized travel recommendations and exclusive deals. 
-                Start your Journey today!    
-            </p>
-            
-          </div>
-          <div class="col">
-            <img src="/bootstrap-demo/plane.jpg" class="img-fluid rounded" alt="#">
-          </div>
-        </div>
+      </div>
     </div>
-    <button type="button" class="btn btn-primary mt-2">Learn More</button>
-    <div class="alert alert-primary mt-2" role="alert">
-        A simple primary alert—check it out!
+  </nav>
+
+  <div class="alert alert-success fade d-flex justify-content-between" role="alert" id="bookingAlert">
+    <div>
+      <strong>Success!</strong> Your flight has been booked.
     </div>
+    <button type="button" class="btn-close" onclick="hideAlert()" aria-label="Close"></button>
+  </div>
+
+  <div class="container text-center rounded shadow py-2 mt-2">
+    <div class="row row-cols-1 row-cols-md-2 align-items-center g-4">
+      <div class="col">
+        <h2 class="fw-semibold fs-3 fs-md-2">Experience the magic of Travel</h2>
+        <p class="lead fs-6 fs-md-5 text-wrap mx-3">
+          Plan your dream vacation with us!
+          Explore destinations, book flights and hotels,
+          and discover exciting activities.
+          Get personalized travel recommendations and exclusive deals.
+          Start your Journey today!
+        </p>
+      </div>
+      <div class="col">
+        <img src="/bootstrap-demo/plane.jpg" class="img-fluid rounded shadow-sm" alt="Airplane">
+      </div>
+    </div>
+  </div>
+  <div class="container mt-4">
+    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+      <button type="button" class="btn btn-primary btn-lg px-4 py-2" data-bs-toggle="alert" onclick="showAlert()">
+        Book Flight
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function showAlert() {
+      const alert = document.getElementById('bookingAlert');
+      alert.classList.add('show');
+    }
+
+    function hideAlert() {
+      const alert = document.getElementById('bookingAlert');
+      alert.classList.remove('show');
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
 </body>
+
 </html>
